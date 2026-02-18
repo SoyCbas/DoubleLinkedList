@@ -96,8 +96,19 @@ public class DoubleLinkedList<T> implements java.util.List{
 
     @Override
     public int lastIndexOf(Object o) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'lastIndexOf'");
+        int output = size; // pq el size se sale de bounds no?
+        boolean found = false;
+        
+        while (output > 0 && !found) {
+            output--;
+            if (get(output).equals(o)) {
+                found =  true;
+            }
+        }
+
+        return output;
+
+
     }
 
     @Override
