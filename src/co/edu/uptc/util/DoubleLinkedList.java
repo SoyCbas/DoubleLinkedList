@@ -9,6 +9,7 @@ public class DoubleLinkedList<T> implements java.util.List{
     private Node<T> head;
     private Node<T> tail;
     private int size;
+    private int test;
 
     public DoubleLinkedList(){
         size = 0;
